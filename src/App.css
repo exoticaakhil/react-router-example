@@ -455,6 +455,9 @@ height: 80vh;
   padding: 10px 12px;
   width: 100%;
 }
+.left{
+  padding-top: 8px;
+}
 
 .btn{
   padding: 10px 12px;
