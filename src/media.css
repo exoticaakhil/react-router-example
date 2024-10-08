@@ -1,0 +1,132 @@
+@media only screen and (max-width: 768px) {
+    /* Adjust container width and padding */
+  
+  
+    /* Navbar */
+    .navbar {
+        height: 60px; /* Smaller height for mobile */
+    }
+
+    .navbar .menu-container .nav-menu {
+        display: none; /* Hide nav menu by default */
+    }
+
+    .navbar .menu-container .toggler {
+        display: block; /* Show toggler button */
+    }
+
+    .navbar .menu-container .toggler:hover {
+        color: #fff; /* Change color on hover */
+    }
+
+    .navbar .menu-container .nav-menu.active {
+        display: block; /* Show active nav menu */
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        background-color: #eee; /* Background color for mobile menu */
+        padding-top: 5rem;
+        width: 30vw; /* Width of the mobile menu */
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        flex-direction: column;
+        z-index: 9999; /* Ensure it’s above other elements */
+        animation: toggle 3s linear;
+
+    }
+
+    .navbar .menu-container .nav-menu.active li {
+        width: 100%; /* Full width for each list item */
+        text-align: center; /* Center text */
+    }
+
+    .navbar .menu-container .nav-menu.active li a {
+        width: 100%; /* Full width for links */
+        text-align: center; /* Center links */
+        color: #222; /* Default link color */
+    }
+
+    .navbar .menu-container .nav-menu.active li:hover a {
+        color: #fff; /* Change link color on hover */
+    }
+
+    .user-image,
+    .user-image img {
+        display: none; /* Hide user image on mobile */
+    }
+
+    /* Adjusting the contact container */
+    .contact-container {
+        flex-direction: column; /* Stack sections vertically */
+        align-items: center; /* Center items */
+        gap: 1rem; /* Reduce gap between sections */
+    }
+  
+    .left, .right {
+        width: 100%; /* Full width for mobile */
+    }
+  
+    /* Form adjustments */
+    .right form fieldset {
+        padding: 20px; /* Reduce padding */
+    }
+  
+    .right form fieldset .form-title {
+        font-size: 1.3rem; /* Smaller font size for mobile */
+    }
+  
+    .input-item {
+        padding: 8px; /* Reduce padding in input items */
+    }
+  
+    .input-item .form-input {
+        padding: 8px 10px; /* Smaller padding for inputs */
+        font-size: 0.9rem; /* Smaller font size for inputs */
+    }
+  
+    .btn {
+        font-size: 0.9rem; /* Adjust button font size */
+        padding: 8px 10px; /* Smaller button padding */
+    }
+  
+    /* Adjust icons */
+    .icons .link {
+        font-size: 1.2rem; /* Smaller icon size */
+    }
+    .info .list-title {
+        font-size: 1.1rem; /* Slightly smaller font */
+      }
+    
+      .info .personal {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+      }
+      .user,
+      .user img {
+          display: none; /* Hide user image on mobile */
+      }
+    
+      .list li {
+        flex-direction: column; /* Stack list items vertically */
+        align-items: flex-start; /* Align text to the start */
+      }
+  
+    .list li {
+        flex-direction: column; /* Stack list items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+}
+@keyframes toggle {
+    0% {
+        transform: translateX(-100%);
+        
+    }
+    100% {
+        transform: translateX(0%);
+       
+    }
+ 
+    
+ }

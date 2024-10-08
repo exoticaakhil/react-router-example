@@ -1,38 +1,482 @@
-.App {
+/* Common classes */
+.container {
+  width: 90%;
+  padding: 5rem 0;
+  margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+  height: 75px;
+  width: 100%;
+  background-color: #6a5acd;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .menu-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.navbar .menu-container .nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.nav-menu .nav-item {
+  padding: 10px 12px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.logo {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav-item .nav-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-item:hover {
+  background-color: #9f91f9;
+}
+
+/* Background Section */
+.background {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.name {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  line-height: 5rem;
+}
+
+.name h1 {
+  font-size: 4rem;
+  color: #6a5acd;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.name h3 {
+  color: #888;
+}
+
+.name h3 .desg {
+  color: #222;
+  text-transform: capitalize;
+  border-bottom: 3px dotted #6a5acd;
+}
+
+.name .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icons .link {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #222;
+}
+
+.icons .link:hover {
+  color: #6a5acd;
+}
+
+/* User Image */
+.user-image {
+  /* background: url("../public/image1.jpg"); */
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: #eee;
+  border-radius: 50%;
+  background-size: cover;
+  width: 100%;
+}
+
+.user-image img {
+  max-width: 100%;
+  height: 100vh;
+  border-radius: 50%;
+  width: 50vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* About Section */
+.about-title {
+  font-size: 1.3rem;
+  color: #6a5acd;
+  padding: 10px;
+}
+
+.desc {
+  color: #888;
+  width: 80%;
+  margin: auto;
+  padding-top: 2rem;
+  word-break: break-word;
+}
+
+/* Content Section */
+.content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+
+.content .user {
+  width: 40%;
+}
+
+.content .user img {
+  width: 50%;
+  margin-left: 4rem;
+}
+
+.content .info {
+  width: 100%;
+}
+
+.info .list-title {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #888;
+}
+
+.info .personal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info .list {
+  padding: 10px;
+  list-style: none;
+  width: 100%;
+}
+
+.list li {
+  padding: 15px;
+  border: 1px solid #888;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Technologies Section */
+.info {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+}
+
+.info-title h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #6a5acd;
+  margin-bottom: 15px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Two-Column Layout for Technologies */
+.tech {
+  display: flex;
+  justify-content: space-between;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.column {
+  width: 48%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Column Headings */
+.column h5 {
+  font-size: 1.2rem;
+  color: #6a5acd;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Technology List */
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list li {
   display: flex;
   flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.list li strong {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Progress Bars */
+#html, #css, #js, #react, #node, #express, #mongo, #sql {
+  height: 10px;
+  width: 100%;
+  background-color: #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+#html::after, #css::after, #js::after, #react::after,
+#node::after, #express::after, #mongo::after, #sql::after {
+  content: '';
+  display: block;
+  height: 100%;
+  border-radius: 4px;
+}
+
+#html::after { width: 90%; background-color: #e44d26; }
+#css::after { width: 85%; background-color: #2965f1; }
+#js::after { width: 75%; background-color: #f0db4f; }
+#react::after { width: 70%; background-color: #61dafb; }
+#node::after { width: 65%; background-color: #68a063; }
+#express::after { width: 60%; background-color: #303030; }
+#mongo::after { width: 80%; background-color: #4db33d; }
+#sql::after { width: 70%; background-color: #00758f; }
+/* resume */
+.resume-view{
+width: 100%;
+height: 80vh;
+}
+/* Projects Section */
+.projects-container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+}
+
+.projects-container .card .card-image {
+  width: 100%;
+}
+
+.card .card-img img {
+  padding: 10px;
+  width: 100%;
+  height: auto; /* Square-ish ratio */
+  object-fit: cover; /* Ensures images are cropped without distortion */
+  border-radius: 20px;
+}
+
+.card .card-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: #6a5acd;
+  border-radius: 10px;
+  flex-direction: column;
+  line-height: 2rem;
+  visibility: hidden;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.card-container h2 {
+  text-transform: capitalize;
+  margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-container .btn {
+  padding: 8px 10px;
+  text-decoration: none;
+  border: 1px solid #eee;
+  margin: 0 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.4s;
 }
+
+.btn:hover {
+  background-color: #222;
+}
+
+.card:hover .card-container {
+  visibility: visible;
+  z-index: 2;
+  cursor: pointer;
+}
+/* contact form */
+.contact-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+.contact-container{
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+.left, .right{
+  width: 100%;
+
+}
+.left .info{
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.left .icons{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.right form fieldset{
+
+  height: 100%;
+  padding: 30px;
+}
+.right form fieldset .form-title{
+  text-align: center;
+  font-size: 1.5rem;
+}
+.input-item{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.input-item .form-input{
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.btn{
+  padding: 10px 12px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.success{
+  background-color: green;
+  color: #fff;
+}/* contact form */
+.contact-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 20px;
+}
+.contact-container{
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+}
+.left, .right{
+  width: 100%;
+
+}
+.left .info{
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.left .icons{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.right form fieldset{
+
+  height: 100%;
+  padding: 30px;
+}
+.right form fieldset .form-title{
+  text-align: center;
+  font-size: 1.5rem;
+}
+.input-item{
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.input-item .form-input{
+  padding: 10px 12px;
+  width: 100%;
+}
+
+.btn{
+  padding: 10px 12px;
+  font-size: 1.1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.success{
+  background-color: green;
+  color: #fff;
+}
+.navbar .menu-container .toggler{
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+
